@@ -62,12 +62,28 @@ namespace practica1.src.Controllers
             }
         }
 
-        /*
-        [HttpPut]
+        [HttpPut("{code}")]
         public async Task<IActionResult> Put([FromRoute]string code, [FromBody]UpdateProductRequestDto updateProductRequestDto)
         {
-            
+            // Verificar si el cuerpo del request es válido (validación automática de ASP.NET Core)
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // Retorna 400 si alguna validación en el DTO falla
+            }
+
+            // Verificar si el producto existe
+            var exists = await _productRepository.ExistsByCode(code);
+            if (!exists)
+            {
+                return NotFound("Producto no encontrado"); // Retorna 404 si no encuentra el producto
+            }
+
+            // Actualizar el producto
+            var productModel = await _productRepository.Put(code, updateProductRequestDto);
+
+            // Devolver el producto actualizado como respuesta
+            return Ok(productModel.ToProductDto());
         }
-        */
+        
     }
 }

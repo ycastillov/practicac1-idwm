@@ -29,5 +29,6 @@ namespace practica1.src.Mappers
                 CategoryId = createProductDto.CategoryId
             };         
         } 
+        
     }
 }

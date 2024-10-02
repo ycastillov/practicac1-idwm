@@ -126,3 +126,4 @@ C:\Users\yamca\OneDrive\Desktop\Yamir\Universidad\Semestre 6\Intr. Desarrollo We
 C:\Users\yamca\OneDrive\Desktop\Yamir\Universidad\Semestre 6\Intr. Desarrollo Web Móvil\Cátedras\Ejemplos\Practica Catedra 1\practica1\obj\Debug\net8.0\practica1.pdb
 C:\Users\yamca\OneDrive\Desktop\Yamir\Universidad\Semestre 6\Intr. Desarrollo Web Móvil\Cátedras\Ejemplos\Practica Catedra 1\practica1\obj\Debug\net8.0\practica1.genruntimeconfig.cache
 C:\Users\yamca\OneDrive\Desktop\Yamir\Universidad\Semestre 6\Intr. Desarrollo Web Móvil\Cátedras\Ejemplos\Practica Catedra 1\practica1\obj\Debug\net8.0\ref\practica1.dll
+C:\Users\yamca\OneDrive\Desktop\Yamir\Universidad\Semestre 6\Intr. Desarrollo Web Móvil\Cátedras\Ejemplos\Practica Catedra 1\practica1\obj\Debug\net8.0\practica1.sourcelink.json

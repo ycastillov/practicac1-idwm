@@ -50,9 +50,18 @@ namespace practica1.src.Repositories
             return productToDelete;
         }
 
-        public Task<Product?> Put(string code, UpdateProductRequestDto updateProductRequestDto)
+        public async Task<Product?> Put(string code, UpdateProductRequestDto updateProductRequestDto)
         {
-            throw new NotImplementedException();
+            var productModel = await _dataContext.Products.FirstOrDefaultAsync(p => p.Code == code);
+            if (productModel == null)
+            {
+                return null;
+            }
+            productModel.Name = updateProductRequestDto.Name;
+            productModel.Stock = updateProductRequestDto.Stock;
+
+            await _dataContext.SaveChangesAsync();
+            return productModel;
         }
     }
 }
